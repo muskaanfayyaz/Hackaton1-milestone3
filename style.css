@@ -3,12 +3,12 @@ body {
     font-family: sans-serif;
     background-color: #e0f7f9ad;
     margin: 0;
-    padding: 50px;
+    padding: 20px;
 }
 
 /* Form Container Styling */
 .form-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto 50px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -62,115 +62,67 @@ button:hover {
 .resume-container {
     display: flex;
     background-color: #ffffff;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    flex-wrap: wrap;
 }
 
-/* Left Section Styling */
+.left-section, .right-section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .left-section {
     background-color: #266b5d;
     color: white;
-    padding: 20px;
-    width: 35%;
     text-align: center;
-    border-right: 5px solid #e59e3b69;
+    width: 100%;
+    border-bottom: 5px solid #e59e3b69;
+}
+
+.right-section {
+    width: 100%;
+    text-align: center;
 }
 
 .profile-picture {
     width: 150px;
     height: 150px;
-    margin-top: 10%;
+    margin: 20px auto;
     border-radius: 50%;
     border: 5px solid #e59e3b69;
-    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 24px;
-    margin: 10px 0;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#summary-h3, #profile-info-h3 {
-    border: #266b5d 1px solid;
-    box-shadow: 0 0 15px #9cb1ad75;
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 18px;
-    text-align: center;
-    padding: 2%;
-    margin: 5% 0;
+h1, h3 {
     color: #006d77;
-    border-radius: 10px;
-    border: #266b5d 1px solid;
-    box-shadow: 0 0 15px #266b5d75;
-    font-weight: bold;
 }
 
-ul {
-    list-style-type: disc;
-    padding: 10px;
-    margin: 10px 0;
+/* Responsive Styling */
+@media screen and (min-width: 768px) {
+    .resume-container {
+        flex-direction: row;
+    }
+
+    .left-section {
+        width: 35%;
+        border-right: 5px solid #e59e3b69;
+        border-bottom: none;
+    }
+
+    .right-section {
+        width: 65%;
+    }
 }
 
-ul li {
-    margin: 5px 0;
-}
+@media screen and (max-width: 767px) {
+    .left-section, .right-section {
+        width: 100%;
+    }
 
-/* Right Section Styling */
-.right-section {
-    padding: 20px;
-    width: 65%;
-}
-
-#certification-h3 {
-    color: #006d77;
-    font-weight: bold;
-}
-
-/* Button Styling */
-button {
-    font-family: sans-serif;
-    background-color: #266b5d;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #266b5da0;
-}
-
-/* Adjustments for the form */
-textarea {
-    height: 100px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    border: 1px solid #266b5d;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border: 2px solid #006d77;
-    box-shadow: 0 0 10px #006d77;
-}
-
-.profile-picture {
-    max-width: 100%; /* Or any other suitable width */
-    height: auto; /* Ensure it maintains aspect ratio */
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
 }
